@@ -1,0 +1,38 @@
+{
+  // "prettier.documentSelectors": ["**/*.astro"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    // importを自動でsort
+    "source.organizeImports.biome": "explicit",
+  },
+
+  // VSCode で import を記述する際に tsconfig の設定に応じて絶対パスとする
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  // Stylelint とのバッティング回避のため、VS Code 標準の自動整形を無効化（CSS, SCSS, LESS）
+  "css.validate": false,
+
+  // Stylelint の実行対象を指定
+  "stylelint.validate": ["css", "postcss"],
+
+  // postcssによってcssが実質scssになるので、scssとみなしても良い気がするが、混乱はしそう。
+  // "files.associations": {
+  //   "*.css": "scss"
+  // },
+}
